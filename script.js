@@ -153,8 +153,8 @@ function generatePassword() {
   isSpecialCharacters ? selectedChar.push("specialCharacters") : "";
   
   console.log(selectedChar);
-  var userSelection = [numberOfCharcters, isUpperCasedCharacters, isLowerCasedCharacters, isNumericCharacters, isSpecialCharacters];
-var userChoice = prompt("Your chosen options are: " + userSelection);
+  /* var userSelection = [numberOfCharcters, isUpperCasedCharacters, isLowerCasedCharacters, isNumericCharacters, isSpecialCharacters];
+var userChoice = prompt("Your chosen options are: " + userSelection); */
 
 
   var generatedPass = [];
