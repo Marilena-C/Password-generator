@@ -21,3 +21,4 @@ GitHub repository: https://github.com/Marilena-C/Password-generator
 Deployed website: https://marilena-c.github.io/Password-generator/
 
 ## Screenshots
+https://github.com/Marilena-C/Password-generator/blob/main/assets/images/Screenshot_GitHubRepo.jpg

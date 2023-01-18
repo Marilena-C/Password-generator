@@ -96,19 +96,16 @@ var isSpecialCharacters = false;
 
 
 // Function to prompt user for password options
+console.log("Please press the button to generate a pasword");
 function getPasswordOptions() {
   //Questions to ask the user:
   numberOfCharcters = parseInt(
     prompt(
-      "How many characters would you like in the password? \n--> Please insert a number between 10 and 64 inclusive <--"
+      "How many characters would you like in the password? \n * Please insert a number between 10 and 64 inclusive *"
     )
   );
-  numberOfCharcters = parseInt(
-    prompt(
-      "How many characters would you like in the password? \n--> Please least 10 characters but no more than 64! <--"
-    )
-  );
-  //Check if the user inserted a number between 10 and 64 or not
+ 
+   //Check if the user inserted a number between 10 and 64 or not
 
   if (Number.isFinite(numberOfCharcters)) {
     //if the number of characters condition is fulfilled, go to next question
@@ -121,7 +118,7 @@ function getPasswordOptions() {
           isLowerCasedCharacters ||
           isNumericCharacters ||
           isSpecialCharacters)) {
-        alert("You choose not to allow any of the characters options in the password!");
+        alert("You choose not to allow any of the characters options in the password. Please try again");
         return undefined;
       }
     } else {
@@ -154,8 +151,11 @@ function generatePassword() {
   isLowerCasedCharacters ? selectedChar.push("lowerCasedCharacters") : "";
   isNumericCharacters ? selectedChar.push("numericCharacters") : "";
   isSpecialCharacters ? selectedChar.push("specialCharacters") : "";
-
+  
   console.log(selectedChar);
+  var userSelection = [numberOfCharcters, isUpperCasedCharacters, isLowerCasedCharacters, isNumericCharacters, isSpecialCharacters];
+var userChoice = prompt("Your chosen options are: " + userSelection);
+
 
   var generatedPass = [];
 
@@ -180,13 +180,11 @@ function generatePassword() {
         generatedPass[i] = getRandom(specialCharacters);
         break;
     }
-
     // console.log(generatedPass);
-  }
+  }  return generatedPass.join("");
 }
 
-var userSelection = [numberOfCharcters, isUpperCasedCharacters, isLowerCasedCharacters, isNumericCharacters, isSpecialCharacters];
-var userChoice = prompt("Your chosen options are: " + userSelection);
+
 
 
 // Get references to the #generate element
@@ -199,7 +197,7 @@ function writePassword() {
 
   passwordText.value = password;
 }
-console.log("Please press the button to generate a pasword");
+
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
