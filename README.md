@@ -7,6 +7,7 @@ The user is presented with some criteria
 Present a series of prompts for password criteria
 Length of password: 
     At least 10 characters but no more than 64.
+
 Character types:
     Lowercase
     Uppercase
@@ -22,3 +23,6 @@ Deployed website: https://marilena-c.github.io/Password-generator/
 
 ## Screenshots
 https://github.com/Marilena-C/Password-generator/blob/main/assets/images/Screenshot_GitHubRepo.jpg
+
+https://github.com/Marilena-C/Password-generator/blob/main/assets/images/Screenshot_Deployed.jpg
+
